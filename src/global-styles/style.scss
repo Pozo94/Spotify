@@ -1,0 +1,298 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'Signika', sans-serif;
+  background-color: var(--color-primary);
+}
+
+#home-page {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.navbar {
+  background-color: var(--color-primary-trans-50);
+  height: 84px;
+  position: sticky;
+  margin: auto;
+  justify-items: center;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 1440px;
+  display: block;
+
+
+}
+
+.top-banner {
+
+
+}
+
+.banner-content {
+  padding-top: 84px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.nav-right {
+  height: inherit;
+  float: right;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  float: left;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary-trans-70);
+  border-radius: 50px;
+}
+
+.user-img {
+  display: inline;
+  border-radius: 64px;
+  position: relative;
+  padding: 10px;
+}
+
+.font-1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  max-width: 350px;
+  padding-left: 50px;
+
+}
+
+.font-2 {
+  padding-left: 50px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21.6px;
+
+}
+
+.font-3 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+
+}
+
+.font-4 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.font-5 {
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.font-6 {
+
+}
+
+p {
+  margin: 20px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 32px 50px;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.song-bar {
+  margin: 8px 50px;
+  background-color: var(--color-static);
+  border-radius: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+  justify-content: center;
+  padding: 15px;
+  height: 65px;
+
+  .album-img {
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.primary-info {
+  display: flex;
+  align-items: center;
+  float: left;
+  height: inherit;
+  width: 100px;
+  gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+
+}
+.desktop-info{
+  display: none;
+}
+.secondary-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  p {
+    margin: 2px;
+    padding: 0;
+  }
+
+  .font-5 {
+    color: var(--color-grey-text);
+  }
+
+}
+.secondary-info-desktop{
+  display: none;
+}
+.secondary-info-tablet{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  vertical-align:center ;
+  grid-column-start: 6;
+  width: inherit;
+  align-self: center;
+  p {
+    margin: 2px;
+    padding: 0;
+  }
+
+  .font-5 {
+    color: var(--color-grey-text);
+  }
+}
+
+.song-bar-icons{
+  float: right;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: inherit;
+  margin-right: auto;
+  justify-content: right;
+  grid-column-start: 11;
+}
+
+.song-bar:hover {
+  background-color: var(--color-hoover);
+}
+
+.song-bar:active {
+  background-color: var(--color-active);
+}
+
+.top-banner {
+  background-image: url("/public/images/banner.png");
+  background-color: #121212;
+  max-width: 1440px;
+  height: 434px;
+  margin: auto;
+
+}
+
+
+@media screen and (min-width: 850px) {
+
+  .song-bar-icons{
+    display: flex;
+    float: right ;
+  }
+  .secondary-info-desktop{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    grid-column-start: 8;
+    width: inherit;
+    align-self: center;
+
+
+
+    p {
+      margin: 2px;
+      padding: 0;
+    }
+
+    .font-5 {
+      color: var(--color-grey-text);
+    }
+  }
+  .font-1 {
+    font-size: 68px;
+    font-weight: 700;
+    letter-spacing: -4px;
+
+  }
+  .font-2 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+
+  }
+  .font-3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+
+  }
+  .font-4 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    align-items: center;
+  }
+  .font-5 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+
+  }
+  .font-6 {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+}
